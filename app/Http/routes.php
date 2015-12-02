@@ -26,7 +26,7 @@ Route::get('/login', function () {
 Route::post('/login', function() {
 	$credentials = Input::only('username', 'password');
 	if(Auth::attempt($credentials)) {
-		return Redirect::intended('/');
+		return Redirect::intended('/spotlight');
 	}
 	return Redirect::to('login');
 });
